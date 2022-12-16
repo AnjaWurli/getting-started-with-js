@@ -55,9 +55,30 @@ function addPositive(a, b) {
     return -a - b;
   }
 }
+
+//oder so:
+function addPositive1(a, b) {
+  return Math.abs(a) + Math.abs(b);
+}
+function addPositive2(a, b) {
+  if (a < 0) {
+    a = -a;
+  }
+  if (b < 0) {
+    b = -b;
+  }
+  return a + b;
+}
+
 console.log(addPositive(2, 3));
 console.log(addPositive(3, -5));
 console.log(addPositive(-1, -8));
+console.log(addPositive1(2, 3));
+console.log(addPositive1(3, -5));
+console.log(addPositive1(-1, -8));
+console.log(addPositive2(2, 3));
+console.log(addPositive2(3, -5));
+console.log(addPositive2(-1, -8));
 
 function fooBar(words) {
   if (words === "foo") {
@@ -73,3 +94,13 @@ console.log(fooBar("foo"));
 console.log(fooBar("bar"));
 console.log(fooBar("xxx"));
 console.log(fooBar("aa"));
+
+const sheeps = [true, false, true, false, true, true, false, 3, 18, true, true];
+let countSheeps = 0;
+
+for (let i = 0; i < sheeps.length; i = i + 1) {
+  if (sheeps[i] === true) {
+    countSheeps = countSheeps + 1;
+  }
+}
+console.log(countSheeps);
