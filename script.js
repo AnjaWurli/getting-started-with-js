@@ -197,3 +197,71 @@ function stringLength(word) {
   }
 }
 console.log(stringLength("asrdtfhg"));
+
+//Tasks day 4: https://github.com/coding-bootcamps-eu/introduction-to-programming-in-js/tree/main/tasks/day4
+
+//even letters are uppercase, uneven lower case
+function evenLettersToUpperCase(text) {
+  if (typeof text === "string") {
+    let result = "";
+    let textUp = text.toLocaleUpperCase();
+    let textLow = text.toLocaleLowerCase();
+
+    for (i = 0; i < text.length; i++) {
+      if (i % 2 !== 0) {
+        /* Index starts with 0!!*/
+        result += textUp[i];
+      } else {
+        result += textLow[i];
+      }
+    }
+    return result;
+  }
+}
+console.log(evenLettersToUpperCase("sd"));
+
+//is word a Palindrome?
+function isPalindrome(text) {
+  text = text.toLocaleLowerCase(); /*case insensitive*/
+  let reverse = "";
+  for (i = text.length - 1; i >= 0; i--) {
+    /*still: index starts with 0!!!*/
+    reverse += text[i];
+  }
+  if (reverse === text) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isPalindrome("taCocat"));
+
+//JohnsData
+const johnsData = {
+  firstName: "John",
+  surName: "Doe",
+  age: 28,
+  city: "Hamburg",
+  children: ["Mia", "Fynn"],
+  hobbies: ["Football", "Playing Guitar"],
+};
+
+function fullName() {
+  console.log(johnsData.firstName + " " + johnsData.surName);
+}
+
+function changeJohnsData(propName, propValue) {
+  if (johnsData[propName] === true) {
+    johnsData[propName] = propValue;
+  } else {
+    console.log(
+      "Sorry the passed in argument doesn't exists as a property in the johnsData object"
+    );
+  }
+}
+
+//changeJohnsData("firstNme", "Kai");
+// johnsData["surName"] = "Mia";
+// johnsData.surName = "Mia";
+console.log(johnsData["hobbies"]);
+fullName();
