@@ -18,7 +18,7 @@ function johnHasBirthday() {
 console.log(johnHasBirthday());
 
 function changeJohnsData(propName, propValue) {
-  if (johnsData[propName] === true) {
+  if (johnsData.hasOwnProperty(propName) === true) {
     johnsData[propName] = propValue;
   } else {
     console.log(
@@ -26,7 +26,8 @@ function changeJohnsData(propName, propValue) {
     );
   }
 }
+//changeJohnsData("firstName", "Kai");
+//console.log(fullName());
 
-//changeJohnsData("firstNme", "Kai");
 // johnsData["surName"] = "Mia";
 // johnsData.surName = "Mia";

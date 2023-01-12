@@ -41,6 +41,6 @@ describe("johnsData Function Tests", function () {
 
   it("the function johnHasBirthday increases John's age by one", function () {
     johnHasBirthday();
-    chai.expect(johnsData.age).to.equal(johnsData.age + 1);
+    chai.expect(johnsData.age).to.equal(29);
   });
 });

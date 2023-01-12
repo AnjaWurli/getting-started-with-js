@@ -249,6 +249,12 @@ const johnsData = {
 function fullName() {
   console.log(johnsData.firstName + " " + johnsData.surName);
 }
+console.log(fullName());
+
+function johnHasBirthday() {
+  return (johnsData.age += 1);
+}
+console.log(johnHasBirthday());
 
 function changeJohnsData(propName, propValue) {
   if (johnsData[propName] === true) {
